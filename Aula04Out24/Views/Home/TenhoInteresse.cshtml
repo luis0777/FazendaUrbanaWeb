@@ -1,0 +1,107 @@
+﻿@model Aula04Out24.Models.Cliente
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://kit.fontawesome.com/3487a22d87.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/TenhoInteresse.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <script>
+    $(document).ready(function () {
+        @if (TempData["ToastrMessage"] != null)
+        {
+            <text>
+                toastr["@TempData["ToastrType"]"]("@TempData["ToastrMessage"]");
+            </text>
+        }
+    });
+    </script>
+    <title>Tenho Interesse</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><img src="~/IMG/Home/logo.png"></div>
+            <div class="menu">
+                <nav>
+                    <a href="@Url.Action("Home")" class=""
+                <a class="nav-item" href="~/Views/Home/Home.cshtml">INICIO</a>
+
+                <a href="@Url.Action("QuemSomos")" class=""
+                <a class="nav-item" href="~/Views/Home/QuemSomos.cshtml">QUEM SOMOS</a>
+
+                <a href="@Url.Action("TenhoInteresse")" class=""
+                <a class="nav-item" href="~/Views/Home/TenhoInteresse.cshtml">TENHO INTERESSE</a>
+
+                <a href="@Url.Action("Login")" class=""
+                <a class="nav-item" href="~/Views/Home/Login.cshtml">LOGIN</a>
+                </nav>
+            </div>
+            <div class="sociais">
+                <a href="https://www.instagram.com/luisfelipe__7/" target="_blank">
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                </a>
+                <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="form-container">
+
+
+        <div class="container">
+            <article>
+                <section>
+                    <h2>Tenho Interesse</h2>
+                    <h3>Insira suas informaçoes e entraremos em contato assim que possível!</h3>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" }) <!-- Exibe todas as mensagens de erro -->
+
+                        <!-- Campo NomeCliente -->
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NomeCliente, "Nome")
+                            <div>
+                                @Html.EditorFor(model => model.NomeCliente)
+                                @Html.ValidationMessageFor(model => model.NomeCliente)
+                            </div>
+                        </div>
+
+                        <!-- Campo Email -->
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, "Email")
+                            <div>
+                                @Html.EditorFor(model => model.Email)
+                                @Html.ValidationMessageFor(model => model.Email)
+                            </div>
+                        </div>
+
+                        <!-- Campo Descricao -->
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Descricao, "Descrição")
+                            <div>
+                                @Html.TextAreaFor(model => model.Descricao, new { @class = "form-control", rows = 4 })
+                                @Html.ValidationMessageFor(model => model.Descricao)
+                            </div>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="Enviar" class="btn btn-success" />
+                        </div>
+                    }
+                </section>
+            </article>
+            <div class="container">
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿@model List<Aula04Out24.Models.Cliente>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://kit.fontawesome.com/3487a22d87.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/Gerenciamento.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <script>
+$(document).ready(function () {
+    @if (TempData["ToastrMessage"] != null)
+    {
+        <text>
+            toastr["@TempData["ToastrType"]"]("@TempData["ToastrMessage"]");
+        </text>
+    }
+});
+    </script>
+    <title>Gerenciamento</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><img src="~/IMG/Home/logo.png"></div>
+            <div class="menu">
+                <nav>
+                    <a href="@Url.Action("Home")" class="nav-item">INICIO</a>
+                    <a href="@Url.Action("QuemSomos")" class="nav-item">QUEM SOMOS</a>
+                    <a href="@Url.Action("TenhoInteresse")" class="nav-item">TENHO INTERESSE</a>
+                    <a href="@Url.Action("Login")" class="nav-item">LOGIN</a>
+                </nav>
+            </div>
+            <div class="sociais">
+                <a href="https://www.instagram.com/luisfelipe__7/" target="_blank">
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                </a>
+                <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <article>
+            <section>
+                <h2>Gerenciamento de Clientes</h2>
+                <h3>Informações dos Clientes</h3>
+
+                <div class="luis">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                </div>
+                <tbody>
+                    @foreach (var cliente in Model)
+                    {
+                        <tr>
+                            <td>@cliente.NomeCliente</td>
+                            <td>@cliente.Email</td>
+                            <td>@cliente.Descricao</td>
+                        </tr>
+                    }
+                </tbody>
+                </table>
+            </section>
+        </article>
+    </div>
+
+</body>
+</html>

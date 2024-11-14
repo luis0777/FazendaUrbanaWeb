@@ -1,0 +1,91 @@
+﻿@model Aula04Out24.Models.Adm
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://kit.fontawesome.com/3487a22d87.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/Login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <script>
+    $(document).ready(function () {
+        @if (TempData["ToastrMessage"] != null)
+        {
+            <text>
+                toastr["@TempData["ToastrType"]"]("@TempData["ToastrMessage"]");
+            </text>
+        }
+    });
+    </script>
+    <title>Login</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><img src="~/IMG/Home/logo.png"></div>
+            <div class="menu">
+                <nav>
+                    <a class="nav-item" href="@Url.Action("Home")">INICIO</a>
+                    <a class="nav-item" href="@Url.Action("QuemSomos")">QUEM SOMOS</a>
+                    <a class="nav-item" href="@Url.Action("TenhoInteresse")">TENHO INTERESSE</a>
+                    <a class="nav-item" href="@Url.Action("Login")">LOGIN</a>
+                </nav>
+            </div>
+            <div class="sociais">
+                <a href="https://www.instagram.com/luisfelipe__7/" target="_blank">
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                </a>
+                <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <div class="container">
+            <article>
+                <section>
+                    <h2>Login</h2>
+                    <h3>Insira seu usuário e senha para acessar sua conta</h3>
+
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" }) <!-- Exibe todas as mensagens de erro -->
+
+                        <!-- Campo Usuário -->
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Usuario, "Usuário")
+                            <div>
+                                @Html.TextBoxFor(model => model.Usuario, new { @class = "form-control" })
+                            </div>
+                            <div>
+                                @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "text-danger" }) <!-- Exibe a mensagem de erro -->
+                            </div>
+                        </div>
+
+                        <!-- Campo Senha -->
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Senha, "Senha")
+                            <div>
+                                @Html.PasswordFor(model => model.Senha, new { @class = "form-control" })
+                            </div>
+                            <div>
+                                @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" }) <!-- Exibe a mensagem de erro -->
+                            </div>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="Entrar" class="btn btn-success" />
+                        </div>
+                    }
+                </section>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/QuemSomos.css">
+    <title>Quem Somos</title>
+</head>
+<body>
+    <header>
+        <div class="container-menu">
+            <div class="logo"><img src="~/IMG/Home/logo.png"></div>
+            <div class="menu">
+                <nav>
+                    <a href="@Url.Action("Home")" class=""
+                    <a class="nav-item" href="~/Views/Home/Home.cshtml">INICIO</a>
+
+                    <a href="@Url.Action("QuemSomos")" class=""
+                    <a class="nav-item" href="~/Views/Home/QuemSomos.cshtml">QUEM SOMOS</a>
+
+                    <a href="@Url.Action("TenhoInteresse")" class=""
+                    <a class="nav-item" href="~/Views/Home/TenhoInteresse.cshtml">TENHO INTERESSE</a>
+
+                    <a href="@Url.Action("Login")" class=""
+                    <a class="nav-item" href="~/Views/Home/Login.cshtml">LOGIN</a>
+                </nav>
+            </div>
+            <div class="sociais">
+                <a href="https://www.instagram.com/luisfelipe__7/" target="_blank">
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                </a>
+                <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+
+        </div>
+
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="img/botao-de-menu.png" alt=""></button>
+        </div>
+        <div class="mobile-menu">
+            <nav>
+                <a href="quemsomos.html">QUEM SOMOS</a>
+                <a href="~/Views/Home/TenhoInteresse.cshtml">TENHO INTERESSE</a>
+            </nav>
+            <div class="sociais">
+                <button><i class="fa-brands fa-instagram"></i></button>
+                <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <p>
+            Numa fazenda urbana, pitayas de cores vibrantes
+            pontuam o cenario, destacando-se entre aranha-céus. Cultivando com cuidado meticuloso,
+            essas frutas exóticas sao o orgulho do agricultor urbano.
+            Ele utiliza uma mistura equilibrada de adubos organicos e quimicos de liberacao lenta para garantir o florestamento
+            exuberante das pitayas. Essa pequena parcela verde na selva de concreto nao so fornece uma
+            colheita abundante, mas também inspira a comunidade a reconectar-se com a terra e a aprecia a beleza da agricultura urbana.
+        </p>
+    </main>
+    <aside>
+        <img src="~/IMG/QuemSomos/Arvore Pitaya Vermelha.png" />
+
+    </aside>
+    <script src="~/Scripts/Home.js"></script>
+    <script src="https://kit.fontawesome.com/3487a22d87.js" crossorigin="anonymous"></script>
+</body>
+</html>

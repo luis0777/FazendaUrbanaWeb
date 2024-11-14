@@ -1,0 +1,230 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    font-family: 'Outfit';
+    background-image: url('../img/home/teladefundo.jpeg');
+    display: flex;
+    margin: 25px;
+    flex: 1 1 100vw;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 20px;
+}
+
+article {
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+header {
+    width: 100%;
+    padding: 5px;
+}
+
+.logo, .sociais {
+    width: 25%;
+}
+
+    .logo img {
+        width: 40px;
+        cursor: pointer;
+    }
+
+.menu {
+    width: 50%;
+}
+
+    .menu nav a {
+        color: white;
+        text-decoration: none;
+        padding-right: 30px;
+        font-size: 18px;
+        position: relative;
+    }
+
+        .menu nav a::after {
+            content: "";
+            width: 30px;
+            height: 4px;
+            background-image: linear-gradient(45deg, #000);
+            position: absolute;
+            top: 30px;
+            left: 0;
+            transition: width 0.5s;
+        }
+
+        .menu nav a:hover::after {
+            width: 30px;
+        }
+
+.sociais button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+    .sociais button i {
+        font-size: 20px;
+        color: #000000;
+    }
+
+h2, h3 {
+    color: white;
+    text-align: center; /* Centraliza os títulos */
+    margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
+}
+
+h2 {
+    font-size: 2em; /* Tamanho da fonte para o título h2 */
+}
+
+h3 {
+    font-size: 1.6em; /* Tamanho da fonte para o título h3 */
+}
+
+.luis {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Garante que o conteúdo dentro de .luis estará centralizado */
+    margin-top: 10px; /* Espaço para não ficar em cima do cabeçalho fixo */
+}
+
+table {
+    width: 100%;
+    max-width: 900px; /* Limita a largura da tabela para que não fique muito larga em telas grandes */
+    border-collapse: collapse;
+    background-color: #fff; /* Adiciona fundo branco para a tabela */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+    /* Definir larguras específicas para as colunas */
+    table th:nth-child(1), table td:nth-child(1) {
+        width: 200px; /* Largura da coluna Nome */
+        white-space: nowrap;
+    }
+
+    table th:nth-child(2), table td:nth-child(2) {
+        width: 250px; /* Largura da coluna Email */
+    }
+
+    table th:nth-child(3), table td:nth-child(3) {
+        width: 300px; /* Largura da coluna Descrição */
+    }
+
+
+    table th, table td {
+        padding: 25px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #747874;
+        color: white;
+        font-size: 1.2em;
+    }
+
+
+
+    table td {
+        background-color: white;
+        color: black;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+
+
+/* Estilo dos botões sociais */
+.sociais {
+    display: flex; /* Usa flexbox para o layout dos botões */
+    justify-content: flex-end; /* Alinha os botões à direita */
+}
+
+    .sociais button {
+        width: 40px; /* Largura do botão */
+        height: 40px; /* Altura do botão */
+        border: none; /* Remove a borda do botão */
+        border-radius: 8px; /* Bordas arredondadas */
+        cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+        margin-left: 10px; /* Espaço entre os botões */
+        transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+    }
+
+        .sociais button i {
+            font-size: 20px; /* Tamanho do ícone */
+            color: #000000; /* Cor do ícone */
+        }
+
+        .sociais button:hover {
+            background-color: rgba(0, 0, 0, 0.2); /* Altera a cor de fundo ao passar o mouse */
+        }
+
+/* Estilos de Responsividade */
+@media (max-width: 768px) {
+    .menu nav a {
+        font-size: 16px; /* Diminui o tamanho da fonte para dispositivos menores */
+    }
+
+    h2 {
+        font-size: 1.7em; /* Diminui o tamanho do título h2 */
+    }
+
+    h3 {
+        font-size: 1.1em; /* Diminui o tamanho do título h3 */
+    }
+
+    .logo, .sociais {
+        width: 30%; /* Reduz a largura da logo e dos botões sociais */
+    }
+
+    .menu {
+        width: 40%; /* Reduz a largura do menu */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo, .sociais {
+        width: 40%; /* Reduz ainda mais a largura da logo e dos botões sociais */
+    }
+
+    .menu {
+        width: 60%; /* Reduz a largura do menu */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduz ainda mais o tamanho do título h2 */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Ajusta o tamanho do título h3 */
+    }
+
+    table th, table td {
+        padding: 10px; /* Diminui o padding das células para telas menores */
+    }
+}

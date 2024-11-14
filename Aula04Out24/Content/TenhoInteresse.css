@@ -1,0 +1,208 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    font-family: 'Outfit';
+    background-image: url('../img/home/teladefundo.jpeg');
+    display: flex;
+    margin: 25px;
+    flex: 1 1 100vw;
+    flex-wrap: wrap;
+}
+
+
+
+/* Centralizar o formulário */
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Formulário */
+article {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto; /*Centraliza o formulário dentro da .container*/
+}
+
+header {
+    width: 100%;
+    padding: 5px;
+}
+
+.logo, .sociais {
+    width: 25%;
+}
+
+.logo img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.menu {
+    width: 50%;
+}
+
+.menu nav a {
+    color: white;
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: 18px;
+    position: relative;
+}
+
+.menu nav a::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-image: linear-gradient(45deg, #000);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.menu nav a:hover::after {
+    width: 30px;
+}
+
+.sociais button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.sociais button i {
+    font-size: 20px;
+    color: #000000;
+}
+
+.name {
+    background-color: #c74736;
+}
+
+article {
+    background-color: #74780;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    color: black;
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: black;
+    text-align: left;
+    font-size: 1.0em;
+    margin-bottom: 20px;
+}
+
+/* Estilos do Formulário */
+.form-group {
+    margin-bottom: 10px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px; /* Ajuste de espaço entre o label e o campo */
+        color: black;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"], /* Inclui campo de email */
+    .form-group textarea {
+        width: 100%; /* Ocupa 100% do container pai */
+        max-width: 450px; /* Define um tamanho máximo consistente */
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1em;
+        color: black;
+        transition: border-color 0.3s;
+        
+    }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: black;
+            outline: none;
+        }
+
+
+    /* Mensagens de Validação */
+    .form-group .field-validation-error {
+        color: #d9534f;
+        font-size: 0.875em;
+        margin-top: 5px;
+    }
+
+/* Botão de Cadastro */
+.btn-success {
+    width: 100%;
+    background-color: deeppink;
+    color: black;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-success:hover {
+        background-color: hotpink;
+    }
+
+@media (max-width: 768px) {
+    article {
+        padding: 15px 20px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .btn-success {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .btn-success {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+}

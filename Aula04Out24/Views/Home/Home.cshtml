@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/Home.css">
+
+
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <div class="container-menu">
+            <div class="logo"><img src="~/IMG/Home/logo.png"></div>
+            <div class="menu">
+                <nav>
+                    <a href="@Url.Action("Home")" class=""
+                    <a class="nav-item" href="~/Views/Home/Home.cshtml">INICIO</a>
+
+                    <a href="@Url.Action("QuemSomos")" class=""
+                    <a class="nav-item" href="~/Views/Home/QuemSomos.cshtml">QUEM SOMOS</a>
+
+                    <a href="@Url.Action("TenhoInteresse")" class=""
+                    <a class="nav-item" href="~/Views/Home/TenhoInteresse.cshtml">TENHO INTERESSE</a>
+
+                    <a href="@Url.Action("Login")" class=""
+                    <a class="nav-item" href="~/Views/Home/Login.cshtml">LOGIN</a>
+                </nav>
+            </div>
+            <div class="sociais">
+                <a href="https://www.instagram.com/luisfelipe__7/" target="_blank">
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                </a>
+                <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+
+        </div>
+
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="img/botao-de-menu.png" alt=""></button>
+        </div>
+        <div class="mobile-menu">
+            <nav>
+                <a href="quemsomos.html">QUEM SOMOS</a>
+                <a href="formulario.html">TENHO INTERESSE</a>
+            </nav>
+            <div class="sociais">
+                <button><i class="fa-brands fa-instagram"></i></button>
+                <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <a class="prev" href="#" onclick="addSlides(-1)">
+
+            </a>
+            <div>
+                <div class="slides fade">
+                    <img src="~/IMG/Home/PitayaVermelha.jpg" />
+
+                    <h2 class="title">DESCUBRA O ENCANTO DA PITAYA VERMELHA</h2>
+                    <p class="content">Você já experimentou o sabor irresistível da Pitaya Vermelha? Essa fruta exótica, também conhecida como "fruta do dragão", é uma verdadeira joia tropical, repleta de benefícios para a sua saúde e um sabor que vai surpreender o seu paladar!</p></br>
+                    <b>Sabor Único:</b> Com um gosto suave e levemente adocicado, a Pitaya Vermelha é perfeita para quem busca um toque especial em suas refeições e sobremesas.</br></br>
+
+                    <b>Nutrição Poderosa:</b> Rica em antioxidantes, vitaminas C e B, e fibras, ela ajuda a fortalecer o sistema imunológico e a manter a pele radiante. </br></br>
+
+                    <b>Baixas Calorias:</b> Uma excelente opção para quem quer cuidar da saúde sem abrir mão do sabor.</br></br></p>
+                </div>
+
+                <div class="slides fade">
+                    <img src="~/IMG/Home/PitayaBranca.jpg" />
+                    <h2 class="title">DESCRUBA O SABOR  DA PITAYA BRANCA</h2>
+                    <p class="content">Você já se deliciou com a Pitaya Branca? Conhecida como "fruta do dragão", essa maravilha exótica é a combinação perfeita de sabor delicado e benefícios surpreendentes para a sua saúde. Venha se encantar com essa preciosidade tropical!</p></br>
+                    <b>Superalimento:</b>Rica em antioxidantes, vitaminas C e B, magnésio e fibras, essa fruta auxilia na digestão, fortalece o sistema imunológico e promove uma pele saudável.</br></br>
+
+                    <b>Nutrição Poderosa:</b>Rica em antioxidantes, vitaminas C e B, e fibras, ela ajuda a fortalecer o sistema imunológico e a manter a pele radiante. </br></br>
+
+                    <b>Baixas Calorias:</b>Ideal para quem busca uma alimentação equilibrada e saborosa sem se preocupar com as calorias.</br></br></p>
+                </div>
+
+                <div class="slides fade">
+                    <img src="~/IMG/Home/PitayaAmarela.jpg" />
+                    <h2 class="title">EXPERIMENTE O SABOR EXÓTICO DA PITAYA AMARELA</h2>
+                    <p class="content">Você já provou a Pitaya Amarela? Conhecida como "fruta do dragão", essa delícia tropical é a combinação perfeita de sabor marcante e benefícios incríveis para a sua saúde. Deixe-se encantar por essa preciosidade que vem direto da natureza!</p></br>
+                    <b>SABOR INTENSO:</b>  A Pitaya Amarela possui um gosto doce e suculento, com um toque cítrico que proporciona uma explosão de sabores a cada mordida.</br></br>
+
+                    <b>RIQUEZA NUTRICIONAL:</b> Cheia de antioxidantes, vitaminas C e B, e fibras, essa fruta ajuda a melhorar a digestão, fortalecer o sistema imunológico e manter a pele saudável e radiante. </br></br>
+
+                    <b>POUCAS CALORIAIS:</b> Uma escolha perfeita para quem busca uma alimentação balanceada e saborosa sem se preocupar com as calorias extras.</br></br></p>
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <!--  <button class="button" onclick="addSlides(1)">Proximo</button> -->
+                <div class="dot-box">
+
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="~/Scripts/Home.js"></script>
+    <script src="https://kit.fontawesome.com/3487a22d87.js" crossorigin="anonymous"></script>
+</body>
+</html>
