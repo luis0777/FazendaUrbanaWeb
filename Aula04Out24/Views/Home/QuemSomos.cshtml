@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="~/IMG/Home/Pitaya.png" type="LOGO">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="~/Content/QuemSomos.css">
     <title>Quem Somos</title>
 </head>
 <body>
     <header>
-        <div class="container-menu">
+        <div class="container01">
             <div class="logo"><img src="~/IMG/Home/logo.png"></div>
             <div class="menu">
                 <nav>
-                    <a href="@Url.Action("Home")" class=""
-                    <a class="nav-item" href="~/Views/Home/Home.cshtml">INICIO</a>
-
-                    <a href="@Url.Action("QuemSomos")" class=""
-                    <a class="nav-item" href="~/Views/Home/QuemSomos.cshtml">QUEM SOMOS</a>
-
-                    <a href="@Url.Action("TenhoInteresse")" class=""
-                    <a class="nav-item" href="~/Views/Home/TenhoInteresse.cshtml">TENHO INTERESSE</a>
-
-                    <a href="@Url.Action("Login")" class=""
-                    <a class="nav-item" href="~/Views/Home/Login.cshtml">LOGIN</a>
+                    <a href="@Url.Action("Home")" class="nav-item">INICIO</a>
+                    <a href="@Url.Action("QuemSomos")" class="nav-item">QUEM SOMOS</a>
+                    <a href="@Url.Action("TenhoInteresse")" class="nav-item">TENHO INTERESSE</a>
+                    <a href="@Url.Action("Login")" class="nav-item">LOGIN</a>
                 </nav>
             </div>
             <div class="sociais">
@@ -31,38 +27,55 @@
                 </a>
                 <button><i class="fa-solid fa-envelope"></i></button>
             </div>
-
-        </div>
-
-        <div class="mobile-menu-icon">
-            <button onclick="menuShow()"><img class="icon" src="img/botao-de-menu.png" alt=""></button>
-        </div>
-        <div class="mobile-menu">
-            <nav>
-                <a href="quemsomos.html">QUEM SOMOS</a>
-                <a href="~/Views/Home/TenhoInteresse.cshtml">TENHO INTERESSE</a>
-            </nav>
-            <div class="sociais">
-                <button><i class="fa-brands fa-instagram"></i></button>
-                <button><i class="fa-solid fa-envelope"></i></button>
-            </div>
         </div>
     </header>
     <main>
         <p>
-            Numa fazenda urbana, pitayas de cores vibrantes
-            pontuam o cenario, destacando-se entre aranha-céus. Cultivando com cuidado meticuloso,
-            essas frutas exóticas sao o orgulho do agricultor urbano.
-            Ele utiliza uma mistura equilibrada de adubos organicos e quimicos de liberacao lenta para garantir o florestamento
-            exuberante das pitayas. Essa pequena parcela verde na selva de concreto nao so fornece uma
-            colheita abundante, mas também inspira a comunidade a reconectar-se com a terra e a aprecia a beleza da agricultura urbana.
+            Somos uma fazenda urbana dedicada ao cultivo de pitayas, transformando o cenário cinza da cidade em um vibrante oásis de cores e vida. Com cuidado meticuloso, utilizamos práticas agrícolas que combinam adubos orgânicos e químicos de liberação lenta, garantindo o florescimento saudável e exuberante dessas frutas exóticas. Mais do que produzir uma colheita abundante, nossa missão é inspirar a comunidade a se reconectar com a terra e valorizar a beleza da agricultura urbana, promovendo um estilo de vida mais sustentável e consciente.
         </p>
     </main>
     <aside>
-        <img src="~/IMG/QuemSomos/Arvore Pitaya Vermelha.png" />
-
+        <img src="~/IMG/QuemSomos/QuemSomos.jpg" />
     </aside>
+
+
+    <!--Missão, Visão e Valores-->
+    <div class="card-container">
+        <div class="card mb-3">
+            <img src="~/IMG/QuemSomos/Missão.jpg" />
+            <div class="card-body">
+                <p style="font-size:1em;" class="card-text">Cultivar pitayas de alta qualidade em um ambiente urbano, promovendo sustentabilidade, inovação e acesso a alimentos saudáveis, enquanto educamos a comunidade sobre práticas agrícolas sustentáveis e os benefícios da pitaya.</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <img src="~/IMG/QuemSomos/Visão.jpg" />
+            <div class="card-body">
+                <p style="font-size:1em;" class="card-text">Ser referência no cultivo de pitayas em ambientes urbanos, contribuindo para um futuro mais verde e saudável, onde alimentos nutritivos são produzidos de forma sustentável e acessível a todos.</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <img src="~/IMG/QuemSomos/Valores.jpg" />
+            <div class="card-body">
+                <p style="font-size:1em; margin:1em;" class="card-text">Sustentabilidade, Inovação, Qualidade, Comunidade e Transparência.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título grande adicionado aqui -->
+    <div style="margin-left:40em; margin-top: -570px;">
+        <h4 style="font-size: 3em; font-weight: bold; color: #ffff;">Missão, Visão e Valores</h4>
+    </div>
+
+
+    <div class="footerluis">
+        <p>&copy; 2024 Fazenda Urbana. Todos os direitos reservados.</p>
+    </div>
+
+
     <script src="~/Scripts/Home.js"></script>
     <script src="https://kit.fontawesome.com/3487a22d87.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

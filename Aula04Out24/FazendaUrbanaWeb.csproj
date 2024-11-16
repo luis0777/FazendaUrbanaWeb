@@ -166,11 +166,17 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="IMG\Home\logo.png" />
+    <Content Include="IMG\Home\Pitaya.png" />
     <Content Include="IMG\Home\PitayaAmarela.jpg" />
     <Content Include="IMG\Home\PitayaBranca.jpg" />
     <Content Include="IMG\Home\PitayaVermelha.jpg" />
     <Content Include="IMG\Home\TelaDeFundo.jpeg" />
     <Content Include="IMG\QuemSomos\Arvore Pitaya Vermelha.png" />
+    <Content Include="IMG\QuemSomos\Missão.jpg" />
+    <Content Include="IMG\QuemSomos\QuemSomos.jpg" />
+    <Content Include="IMG\QuemSomos\QuemSomos01.jpg" />
+    <Content Include="IMG\QuemSomos\Valores.jpg" />
+    <Content Include="IMG\QuemSomos\Visão.jpg" />
     <Content Include="Models\ModelBD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelBD.edmx</DependentUpon>
@@ -182,6 +188,7 @@
       <LastGenOutput>ModelBD.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\TenhoInteresse.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />

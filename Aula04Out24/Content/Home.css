@@ -14,83 +14,95 @@ body {
     flex-wrap: wrap;
 }
 
-.container-menu {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Estiliza o cabeçalho */
 header {
-    width: 100%;
-    padding: 5px;
+    width: 100%; /* Ocupa 100% da largura */
+    padding: 70px 20px; /* Padding de 10px em cima/baixo e 20px nas laterais */
+    color: white; /* Texto branco */
+    display: flex; /* Layout em flexbox */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Distribui itens entre as extremidades */
 }
 
-.logo, .sociais {
-    width: 15%;
+/* Estiliza o container centralizado */
+.container01 {
+    max-width: 1200px; /* Define largura máxima de 1200px */
+    display: flex; /* Exibe o conteúdo em flexbox */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaço entre os itens */
+    margin-left: 28%;
 }
 
-    .logo img {
-        width: 40px;
-        height: 40px;
-        
-        cursor: pointer;
-    }
-
-.menu {
-    width: 60%;
+/* Estiliza o logotipo */
+.logo img {
+    width: 70px; /* Define a largura da imagem do logotipo */
+    height: 70px;
+    cursor: pointer; /* Define o cursor como "pointer" ao passar sobre o logotipo */
+    margin: -50%;
 }
 
+/* Estiliza o menu de navegação */
+.menu nav {
+    display: flex; /* Exibe os itens do menu em linha */
+    gap: 70px; /* Define um espaço de 20px entre os links do menu */
+    white-space: nowrap;
+}
+
+    /* Estiliza os links do menu de navegação */
     .menu nav a {
-        color: white;
-        text-decoration: none;
-        padding-right: 30px;
-        font-size: 18px;
-        position: relative;
+        color: white; /* Cor do texto branca */
+        text-decoration: none; /* Remove o sublinhado dos links */
+        font-size: 1.1em; /* Aumenta o tamanho da fonte */
+        position: relative; /* Define posição relativa para o efeito de hover */
+        transition: color 0.3s; /* Transição suave de cor no hover */
     }
 
+        /* Muda a cor dos links ao passar o mouse */
+        .menu nav a:hover {
+            color: #ff69b4; /* Cor rosa no hover */
+        }
+
+        /* Cria uma linha de destaque ao passar o mouse nos links */
         .menu nav a::after {
-            content: "";
-            width: 30px;
-            height: 4px;
-            background-image: linear-gradient(45deg, #000);
-            position: absolute;
-            top: 30px;
-            left: 0;
-            transition: width 0.5s;
+            content: ""; /* Adiciona conteúdo vazio */
+            width: 0; /* Inicia a linha com largura zero */
+            height: 2px; /* Altura da linha de destaque */
+            background-color: #ff69b4; /* Cor da linha rosa */
+            position: absolute; /* Posição absoluta em relação ao link */
+            bottom: -5px; /* Posiciona a linha abaixo do link */
+            left: 0; /* Alinha à esquerda */
+            transition: width 0.3s; /* Transição suave para a largura */
         }
 
+        /* Expande a linha de destaque no hover */
         .menu nav a:hover::after {
-            width: 30px;
+            width: 100%; /* A linha ocupa toda a largura do link */
         }
 
-.sociais button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-right: 10px;
+/* Estiliza a seção de redes sociais */
+.sociais {
+    display: flex; /* Exibe os botões em linha */
+    gap: 10px; /* Define um espaço de 10px entre os botões */
+    margin-left: 5%;
+   
 }
 
-    .sociais button i {
-        font-size: 20px;
-        color: black;
+    /* Estiliza os botões das redes sociais */
+    .sociais button {
+        background: none; /* Remove o fundo */
+        border: none; /* Remove a borda */
+        cursor: pointer; /* Define o cursor como "pointer" */
+        font-size: 1.5em; /* Aumenta o tamanho da fonte dos ícones */
+        color: white; /* Cor do texto branca */
+        transition: color 0.3s; /* Transição suave de cor no hover */
     }
 
-.icon {
-    background-color: #000;
-    align-items: center;
-}
+        /* Muda a cor dos botões de redes sociais ao passar o mouse */
+        .sociais button:hover {
+            color: #ff69b4; /* Cor rosa no hover */
+        }
 
-.mobile-menu-icon {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
+/* Fim da header */
 
 
 main {
@@ -99,7 +111,7 @@ main {
     align-items: center;
     width: 100%;
     height: 100%;
-    margin-top: 60px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -193,6 +205,17 @@ img {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+/* Estiliza o rodapé */
+.footerluis {
+    background-color: transparent; /* Fundo transparente */
+    color: #fff; /* Cor do texto branca */
+    font-size: 1.2em; /* Reduz o tamanho da fonte */
+    bottom: 0; /* Alinha ao fundo da página */
+    width: 100%; /* Ocupa toda a largura da página */
+    margin-left: 30em;
+    margin-top: 2em;
+}
+
 
 @keyframes fade {
     from {

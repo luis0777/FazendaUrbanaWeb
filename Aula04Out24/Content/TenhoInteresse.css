@@ -1,208 +1,229 @@
-﻿* {
+﻿/* Aplica padding e margem zero a todos os elementos, define fonte padrão */
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
 }
 
+/* Define o estilo do corpo da página */
 body {
-    font-family: 'Outfit';
-    background-image: url('../img/home/teladefundo.jpeg');
-    display: flex;
-    margin: 25px;
-    flex: 1 1 100vw;
-    flex-wrap: wrap;
+    font-family: 'Outfit'; /* Define a fonte como 'Outfit' */
+    background-image: url('../img/home/teladefundo.jpeg'); /* Define uma imagem de fundo */
+    display: flex; /* Exibe o conteúdo em flexbox */
+    flex: 1 1 100vw; /* O elemento ocupa toda a largura da viewport */
+    flex-wrap: wrap; /* Permite quebra de linha para conteúdo flexível */
 }
 
-
-
-/* Centralizar o formulário */
-.container {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Formulário */
-article {
-    background-color: white;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto; /*Centraliza o formulário dentro da .container*/
-}
-
+/* Inicio da header */
 header {
-    width: 100%;
-    padding: 5px;
+    width: 100%; /* Ocupa 100% da largura */
+    padding: 70px 20px; /* Padding de 10px em cima/baixo e 20px nas laterais */
+    color: white; /* Texto branco */
+    display: flex; /* Layout em flexbox */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Distribui itens entre as extremidades */
 }
 
-.logo, .sociais {
-    width: 25%;
+/* Estiliza o container centralizado */
+.container01 {
+    max-width: 1200px; /* Define largura máxima de 1200px */
+    display: flex; /* Exibe o conteúdo em flexbox */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaço entre os itens */
+    margin-left: 28%;
 }
 
+/* Estiliza o logotipo */
 .logo img {
-    width: 40px;
-    cursor: pointer;
+    width: 70px; /* Define a largura da imagem do logotipo */
+    height: 70px;
+    cursor: pointer; /* Define o cursor como "pointer" ao passar sobre o logotipo */
+    margin: -50%;
 }
 
-.menu {
-    width: 50%;
+/* Estiliza o menu de navegação */
+.menu nav {
+    display: flex; /* Exibe os itens do menu em linha */
+    gap: 70px; /* Define um espaço de 20px entre os links do menu */
+    white-space: nowrap;
 }
 
-.menu nav a {
-    color: white;
-    text-decoration: none;
-    padding-right: 30px;
-    font-size: 18px;
-    position: relative;
+    /* Estiliza os links do menu de navegação */
+    .menu nav a {
+        color: white; /* Cor do texto branca */
+        text-decoration: none; /* Remove o sublinhado dos links */
+        font-size: 1.1em; /* Aumenta o tamanho da fonte */
+        position: relative; /* Define posição relativa para o efeito de hover */
+        transition: color 0.3s; /* Transição suave de cor no hover */
+    }
+
+        /* Muda a cor dos links ao passar o mouse */
+        .menu nav a:hover {
+            color: #ff69b4; /* Cor rosa no hover */
+        }
+
+        /* Cria uma linha de destaque ao passar o mouse nos links */
+        .menu nav a::after {
+            content: ""; /* Adiciona conteúdo vazio */
+            width: 0; /* Inicia a linha com largura zero */
+            height: 2px; /* Altura da linha de destaque */
+            background-color: #ff69b4; /* Cor da linha rosa */
+            position: absolute; /* Posição absoluta em relação ao link */
+            bottom: -5px; /* Posiciona a linha abaixo do link */
+            left: 0; /* Alinha à esquerda */
+            transition: width 0.3s; /* Transição suave para a largura */
+        }
+
+        /* Expande a linha de destaque no hover */
+        .menu nav a:hover::after {
+            width: 100%; /* A linha ocupa toda a largura do link */
+        }
+
+/* Estiliza a seção de redes sociais */
+.sociais {
+    display: flex; /* Exibe os botões em linha */
+    gap: 10px; /* Define um espaço de 10px entre os botões */
+    margin-left: 5%;
+    white-space: nowrap;
 }
 
-.menu nav a::after {
-    content: "";
-    width: 30px;
-    height: 4px;
-    background-image: linear-gradient(45deg, #000);
-    position: absolute;
-    top: 30px;
-    left: 0;
-    transition: width 0.5s;
+    /* Estiliza os botões das redes sociais */
+    .sociais button {
+        background: none; /* Remove o fundo */
+        border: none; /* Remove a borda */
+        cursor: pointer; /* Define o cursor como "pointer" */
+        font-size: 1.5em; /* Aumenta o tamanho da fonte dos ícones */
+        color: white; /* Cor do texto branca */
+        transition: color 0.3s; /* Transição suave de cor no hover */
+    }
+
+        /* Muda a cor dos botões de redes sociais ao passar o mouse */
+        .sociais button:hover {
+            color: #ff69b4; /* Cor rosa no hover */
+        }
+
+/* Fim da header */
+
+
+
+/* Define o estilo do contêiner do formulário */
+.form-container {
+    width: 550px; /* Define a largura do contêiner */
+    margin-left: auto; /* Centraliza o contêiner horizontalmente */
+    margin-right: auto;
 }
 
-.menu nav a:hover::after {
-    width: 30px;
-}
 
-.sociais button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-right: 10px;
-}
 
-.sociais button i {
-    font-size: 20px;
-    color: #000000;
-}
-
-.name {
-    background-color: #c74736;
-}
-
+/* Estiliza o artigo */
 article {
-    background-color: #74780;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    background-color: white; /* Fundo branco */
+    padding: 70px 50px; /* Padding interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    max-width: 500px; /* Largura máxima */
+    margin-left: -2em;
+    margin-top: 2em;
+
+
 }
 
-h2 {
-    color: black;
-    text-align: left;
-    font-size: 1.5em;
-    margin-bottom: 20px;
+/* Estiliza os títulos h2 e h3 */
+h2, h3 {
+    color: black; /* Cor do texto preta */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 20px; /* Margem inferior */
 }
 
-h3 {
-    color: black;
-    text-align: left;
-    font-size: 1.0em;
-    margin-bottom: 20px;
-}
-
-/* Estilos do Formulário */
+/* Estiliza os grupos de formulários */
 .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espaço entre os grupos de formulário */
 }
 
+    /* Estiliza o rótulo dos campos do formulário */
     .form-group label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 10px; /* Ajuste de espaço entre o label e o campo */
-        color: black;
+        display: block; /* Exibe o rótulo como bloco */
+        font-weight: bold; /* Negrito */
+        margin-bottom: 10px; /* Margem inferior */
+        color: black; /* Cor do texto preta */
     }
 
+    /* Estiliza os campos de entrada e área de texto */
     .form-group input[type="text"],
-    .form-group input[type="email"], /* Inclui campo de email */
+    .form-group input[type="email"],
     .form-group textarea {
-        width: 100%; /* Ocupa 100% do container pai */
-        max-width: 450px; /* Define um tamanho máximo consistente */
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 1em;
-        color: black;
-        transition: border-color 0.3s;
-        
+        width: 100%; /* Ocupa 100% da largura do contêiner */
+        max-width: 450px; /* Define uma largura máxima */
+        padding: 15px; /* Padding interno */
+        border: 1px solid #ddd; /* Borda cinza clara */
+        border-radius: 4px; /* Bordas arredondadas */
+        font-size: 1em; /* Tamanho da fonte */
+        color: black; /* Cor do texto preta */
+        transition: border-color 0.3s; /* Transição suave para a borda */
     }
 
+        /* Muda a cor da borda no foco */
         .form-group input[type="text"]:focus,
         .form-group input[type="email"]:focus,
         .form-group textarea:focus {
-            border-color: black;
-            outline: none;
+            border-color: black; /* Borda preta no foco */
+            outline: none; /* Remove o contorno padrão */
         }
 
-
-    /* Mensagens de Validação */
-    .form-group .field-validation-error {
-        color: #d9534f;
-        font-size: 0.875em;
-        margin-top: 5px;
-    }
-
-/* Botão de Cadastro */
-.btn-success {
-    width: 100%;
-    background-color: deeppink;
-    color: black;
-    padding: 10px;
-    font-size: 1em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Estiliza a mensagem de erro de validação */
+.field-validation-error {
+    color: #d9534f; /* Cor vermelha */
+    font-size: 0.875em; /* Tamanho da fonte reduzido */
+    margin-top: 5px; /* Margem superior */
 }
 
+/* Estiliza o botão de sucesso */
+.btn-success {
+    width: 100%; /* Ocupa toda a largura */
+    background-color: deeppink; /* Cor de fundo rosa intensa */
+    color: black; /* Texto preto */
+    padding: 10px; /* Padding interno */
+    font-size: 1em; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Define o cursor como "pointer" */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+    /* Muda a cor de fundo no hover */
     .btn-success:hover {
-        background-color: hotpink;
+        background-color: hotpink; /* Cor rosa mais clara */
     }
 
+/* Estiliza o rodapé */
+.footerluis {
+    background-color: transparent; /* Fundo transparente */
+    color: #fff; /* Cor do texto branca */
+    padding: 20px 0; /* Padding de 20px em cima e embaixo */
+    font-size: 1.2em; /* Reduz o tamanho da fonte */
+
+    bottom: 0; /* Alinha ao fundo da página */
+    width: 100%; /* Ocupa toda a largura da página */
+    margin-left: 31em;
+    margin-top: 1em;
+}
+
+/* Estilos responsivos para telas de até 768px */
 @media (max-width: 768px) {
     article {
-        padding: 15px 20px;
+        padding: 15px 20px; /* Reduz o padding do artigo */
     }
 
     h2 {
-        font-size: 1.3em;
+        font-size: 1.3em; /* Reduz o tamanho da fonte do h2 */
     }
 
     .btn-success {
-        padding: 12px;
-        font-size: 0.9em;
+        padding: 12px; /* Ajusta o padding do botão */
+        font-size: 0.9em; /* Reduz o tamanho da fonte */
     }
 }
 
+/* Estilos responsivos para telas de até 480px */
 @media (max-width: 480px) {
     article {
-        padding: 10px 15px;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    .btn-success {
-        padding: 10px;
-        font-size: 0.85em;
-    }
-}
